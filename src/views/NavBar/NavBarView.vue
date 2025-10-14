@@ -1,0 +1,24 @@
+<script setup>
+</script>
+
+<template>
+    <div class="flex flex-column justify-between items-center bg-green p-10">
+        <div>
+            Reader
+        </div>
+        <div>
+            <ul class="hidden sm:flex gap-5 ">
+                <li>Home</li>
+                <li>Manga</li>
+                <li>About</li>
+                <li>Categories</li>
+            </ul>
+        </div>
+        <div class="flex gap-3">
+            <button>Login</button>
+            <button>Get Started</button>
+        </div>
+    </div>
+</template>
+
+<style scoped></style>
