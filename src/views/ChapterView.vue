@@ -23,6 +23,12 @@
             <div>
                 <img class="w-full" src="@/assets/images/chapter/Second Life Ranker_00.jpg" alt="">
                 <img class="w-full" src="@/assets/images/chapter/Second Life Ranker_01.jpg" alt="">
+                <img class="w-full" src="@/assets/images/chapter/Second Life Ranker_02.jpg" alt="">
+                <img class="w-full" src="@/assets/images/chapter/Second Life Ranker_03.jpg" alt="">
+                <img class="w-full" src="@/assets/images/chapter/Second Life Ranker_04.jpg" alt="">
+                <img class="w-full" src="@/assets/images/chapter/Second Life Ranker_05.jpg" alt="">
+                <img class="w-full" src="@/assets/images/chapter/Second Life Ranker_06.jpg" alt="">
+
             </div>
         </div>
     </div>
