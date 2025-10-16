@@ -4,6 +4,8 @@ import DefaultLayout from '../layouts/DefaultLayout.vue';
 import HomeView from '../views/HomeView.vue';
 import LoginView from '../views/auth/LoginView.vue';
 import NotFoundView from '../views/NotFoundView.vue';
+import BookView from '../views/BookView.vue';
+import ChapterView from '../views/ChapterView.vue';
 
 
 const routes = [
@@ -16,6 +18,16 @@ const routes = [
                 name: 'Home',
                 component: HomeView,
                 meta: { title: 'Home', requiresAuth: false }
+            },
+            {
+                path:'serie/:title',
+                name:'Serie',
+                component:BookView,
+            },
+            {
+                path:'serie/:title/:chapter',
+                name:'Chapter',
+                component:ChapterView,
             }
         ]
     },

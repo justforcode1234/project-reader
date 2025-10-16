@@ -8,10 +8,10 @@
         </div>
         <div>
             <ul class="hidden sm:flex gap-5 ">
-                <li>Home</li>
-                <li>Manga</li>
-                <li>About</li>
-                <li>Categories</li>
+                <li class="cursor-pointer hover:text-yellow-400">Home</li>
+                <li class="cursor-pointer hover:text-yellow-400">Manga</li>
+                <li class="cursor-pointer hover:text-yellow-400">About</li>
+                <li class="cursor-pointer hover:text-yellow-400">Categories</li>
             </ul>
         </div>
         <div class="flex gap-3">
