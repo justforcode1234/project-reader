@@ -1,14 +1,12 @@
 <script setup>
 import CardChapter from './CardChapter.vue';
+import { slugify } from '../../utils/common';
 const props=defineProps({
     chapter:Object,
     minimalStyle:{
         default:false
     }
 })
-function slugify(text) {
-  return text.toLowerCase().replace(/\s+/g, '-').replace(/[^\w-]+/g, '');
-}
 </script>
 
 <template>

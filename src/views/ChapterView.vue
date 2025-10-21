@@ -1,14 +1,22 @@
 <script setup>
 import LinkBar from '../components/LinkBar.vue';
-const title='High School Legend Red Dragon - Chapter 260'
-const chapterNo='Chapter 170'
+import { slugify } from '../utils/common';
+import {useRoute} from 'vue-router'
+
+const route=useRoute()
+
+const title='High School Legend Red Dragon'
+const titleNo = route.query.title_no 
+const chapterNo='170'
+const links=[{name:title,path:`/serie/${slugify(title)}`,query:{title_no:titleNo}},{name:`Chapter ${chapterNo}`,path:`/serie/${slugify(title)}/chapter/${chapterNo}`}]
+console.log(titleNo)
 </script>
 
 <template>
     <div class="w-100% md:w-90% lg:w-70% mx-auto">
-        <div>
-            <h1>{{title}}</h1>
-            <LinkBar :title="title" :chapterNo="chapterNo"/>
+        <div class="flex flex-col gap-2">
+            <h2>{{title+' - Chapter '+chapterNo}}</h2>
+            <LinkBar :links="links"/>
             <div class="flex justify-between">
                 <div>
                     <button>{{chapterNo}}</button>

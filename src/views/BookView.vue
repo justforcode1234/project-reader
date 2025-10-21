@@ -1,14 +1,11 @@
 <script setup>
+import {ref} from 'vue'
 import CardChapter from '../components/Card/CardChapter.vue';
-import { useRoute } from 'vue-router'
 import bannerBg from '@/assets/images/common/banner-bg.jpg';
+import LinkBar from '../components/LinkBar.vue';
+import { slugify } from '../utils/common';
 
-const route = useRoute()
-
-const id = route.query.title_no;
-console.log(id)
-
-const chapter = {
+const chapter = ref({
     "id": 1,
     "src": "@/assets/images/cover/cover1.jpg",
     "title": "Black Crow",
@@ -32,12 +29,14 @@ const chapter = {
             "views": "28.9K"
         }
     ]
-}
+})
+const links=[{name:chapter.value.title,path:`/serie/${slugify(chapter.value.title)}`}]
 </script>
 
 <template>
     <div class="w-100% md:w-90% lg:w-80% mx-auto flex flex-col gap-y-5">
         <div class="w-screen -ml-[50vw] left-1/2 relative" :style="{'background-image': `url(${bannerBg})`,'background-position': 'center','background-size': 'cover'}">
+            <LinkBar class="w-100% md:w-90% lg:w-80% mx-auto" :links="links"/>
             <div class="flex flex-col md:flex-row gap-x-10 items-center py-20 w-100% md:w-90% lg:w-80% mx-auto">
                 <div class="md:self-start w-200 mt-5">
                     <img class="w-full r-5" src="@/assets/images/cover/cover1.jpg" alt="">

@@ -25,7 +25,7 @@ const routes = [
                 component:BookView,
             },
             {
-                path:'serie/:title/:chapter',
+                path:'serie/:title/chapter/:chapterId',
                 name:'Chapter',
                 component:ChapterView,
             }
