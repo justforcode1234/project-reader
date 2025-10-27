@@ -31,6 +31,8 @@ const chapter = ref({
     ]
 })
 const links=[{name:chapter.value.title,path:`/serie/${slugify(chapter.value.title)}`}]
+const fullPath={path:`/serie/${slugify(chapter.value.title)}`,query:{title_no:chapter.value.id}}
+console.log(fullPath)
 </script>
 
 <template>
@@ -123,7 +125,7 @@ const links=[{name:chapter.value.title,path:`/serie/${slugify(chapter.value.titl
                 <p>reverse order</p>
                 <div class="grid md:grid-cols-2 gap-x-5">
                     <CardChapter class="bg-transparent w-full [border-bottom:1px_solid_red]"
-                        v-for="chapter in chapter.chaps" :key="chapter.id" :chapter="chapter" />
+                        v-for="chapter in chapter.chaps" :key="chapter.id" :chapter="chapter" :fullPath="fullPath" />
                 </div>
             </div>
         </div>

@@ -7,10 +7,12 @@ const props=defineProps({
         default:false
     }
 })
+
+const fullPath={path:`/serie/${slugify(props.chapter.title)}`,query:{title_no:props.chapter.id}}
 </script>
 
 <template>
-    <router-link :to="{path:`/serie/${slugify(props.chapter.title)}`,query:{title_no:props.chapter.id}}" class="w-full max-w-250 flex flex-col gap-2 rounded cursor-pointer">
+    <router-link :to="fullPath" class="w-full max-w-250 flex flex-col gap-2 rounded cursor-pointer">
         <img class="w-100% rounded" src="@/assets/images/cover/cover1.jpg" alt="">
         <h4 class="truncate">{{props.chapter.title}}</h4>
         <div v-if="!minimalStyle" class="flex items-center justify-between border border-gray border-solid rounded p-3 t-15">
@@ -24,7 +26,7 @@ const props=defineProps({
             </div>
         </div>
         <div v-if="!minimalStyle" class="flex flex-col gap-1">
-            <CardChapter v-for="chapter in chapter.chaps" :key="chapter.id" :chapter="chapter"/>
+            <CardChapter v-for="chapter in chapter.chaps" :key="chapter.id" :chapter="chapter" :fullPath="fullPath"/>
         </div>
 
     </router-link>
