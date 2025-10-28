@@ -1,11 +1,6 @@
 <script setup>
 import Card from './Card/Card.vue';
 import chapters from '@/chapters.json'
-import { fetchManhwas } from '../api/manhwaService';
-
-// const manhwas=fetchManhwas()
-// console.log(manhwas)
-
 
 </script>
 
